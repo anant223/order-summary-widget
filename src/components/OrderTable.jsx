@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { orders } from "../data/orders";
 import { getTotalRevenue } from "../utils/orderCalculations";
+import StatusBadge from "./StatusBadge";
 
 const OrderTable = ({orders}) => {
   return (
