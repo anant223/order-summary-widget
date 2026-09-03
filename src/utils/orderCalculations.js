@@ -19,3 +19,8 @@ const getTotalRevenueFromFullFilled = () => {
     const fullFilledOrdars = getOrderStatus("fulfilled");
     return fullFilledOrdars.reduce((sum, item) => sum + getTotalRevenue(item), 0)
 }
+export {
+    getPendingOrders,
+    getTotalRevenue,
+    getPendingOrders
+}

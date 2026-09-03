@@ -1,7 +1,9 @@
-import React from 'react'
-import { orders } from '../data/orders';
+import React from "react";
+import { orders } from "../data/orders";
+import { getTotalRevenue } from "../utils/orderCalculations";
 
 const OrderTable = () => {
+    
   return (
     <div>
       <h1>Order Summary</h1>
@@ -21,7 +23,7 @@ const OrderTable = () => {
               <td>{order.id}</td>
               <td>{order.customer}</td>
               <td>{order.items.length}</td>
-              <td>₹{getOrderTotal(order)}</td>
+              <td>₹{getTotalRevenue(order)}</td>
               <td>{order.status}</td>
             </tr>
           ))}
@@ -29,6 +31,6 @@ const OrderTable = () => {
       </table>
     </div>
   );
-}
+};
 
-export default OrderTable
+export default OrderTable;
