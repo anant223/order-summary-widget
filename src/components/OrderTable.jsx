@@ -3,7 +3,6 @@ import { orders } from "../data/orders";
 import { getTotalRevenue } from "../utils/orderCalculations";
 
 const OrderTable = () => {
-    
   return (
     <div>
       <h1>Order Summary</h1>
