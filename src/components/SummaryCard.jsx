@@ -4,14 +4,22 @@ import {
 } from "../utils/orderCalculations";
 const SummaryCard = () => {
   return (
-    <div className="summary">
-      <div className="summary-card">
-        <div className="label">Fulfilled Revenue</div>
-        <div className="value">₹{getTotalRevenueFromFullFilled()}</div>
+    <div className="flex gap-4 mb-7">
+      <div className="flex-1 bg-white rounded-2xl px-6 py-4 shadow-sm shadow-rose-100">
+        <div className="text-xs uppercase tracking-wide text-rose-300 mb-1">
+          Fulfilled Revenue
+        </div>
+        <div className="text-2xl font-bold text-rose-400">
+          ₹{getTotalRevenueFromFullFilled()}
+        </div>
       </div>
-      <div className="summary-card">
-        <div className="label">Pending Orders</div>
-        <div className="value">{getPendingOrders()}</div>
+      <div className="flex-1 bg-white rounded-2xl px-6 py-4 shadow-sm shadow-rose-100">
+        <div className="text-xs uppercase tracking-wide text-rose-300 mb-1">
+          Pending Orders
+        </div>
+        <div className="text-2xl font-bold text-rose-400">
+          {getPendingOrders()}
+        </div>
       </div>
     </div>
   );
