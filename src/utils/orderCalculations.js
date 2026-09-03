@@ -22,5 +22,6 @@ const getTotalRevenueFromFullFilled = () => {
 export {
     getPendingOrders,
     getTotalRevenue,
-    getPendingOrders
+    getPendingOrders,
+    getTotalRevenueFromFullFilled
 }
