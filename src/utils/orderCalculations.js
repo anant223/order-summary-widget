@@ -9,19 +9,19 @@ const getPendingOrders = () => {
 }
 
 const getTotalRevenue = (order) => {
-    return order.item.reduce(
+    return order.items.reduce(
       (sum, item) => sum + item.qty * item.price,
       0,
     );
 }
 
 const getTotalRevenueFromFullFilled = () => {
-    const fullFilledOrdars = getOrderStatus("fulfilled");
-    return fullFilledOrdars.reduce((sum, item) => sum + getTotalRevenue(item), 0)
-}
+  const fullFilledOrdars = getOrderStatus("fulfilled");
+
+  return fullFilledOrdars.reduce((sum, item) => sum + getTotalRevenue(item), 0);
+};
 export {
     getPendingOrders,
     getTotalRevenue,
-    getPendingOrders,
     getTotalRevenueFromFullFilled
 }

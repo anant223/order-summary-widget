@@ -1,4 +1,7 @@
-import { getPendingOrders, getTotalRevenueFromFullFilled } from "../utils/orderCalculations";
+import {
+  getTotalRevenueFromFullFilled,
+  getPendingOrders,
+} from "../utils/orderCalculations";
 const SummaryCard = () => {
   return (
     <div className="summary">

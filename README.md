@@ -1,16 +1,31 @@
-# React + Vite
+# Order Summary Widget
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small Prekies feature to view and filter orders, with summary of fullfilled revenue and pending order count
 
-Currently, two official plugins are available:
+## How to run
+npm install
+npm run dev
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Decisions
 
-## React Compiler
+I chose React because it was preferred option, and it's also easy to use for managing state, espcially, in this case for handling filter, and the displayed orders.The UI can also be cleanly separated into reusable components, which keeps the code organized and easier to maintain.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Since order totals werent' given directly, i calculate them from each order's itmes in shared utils, reused for both the table and summary. arrays are handled naturally, event if it's empty. 
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Ai Usage
+
+When i got this assigment, i worte out on paper how the componets should be divided. I took help from AI to structure  the folders and files.
+
+I also ran into a Vite/Node version conflict during setup, and Claude helped me work through that.
+
+To build the UI, i took advantage  of Claude, so i didn't have to worry about where each element should be placed, becsically it help me to polish the page faster.
+
+I wrote and integerated the core application logic - the order filtering, the reveneu/ pending calculations, and  components structure ( StatusFilter, StatusBadge, 
+SummaryCard, orderTable).
+
+Claude caught a cuple of real bugs in my own code - a typo ( order.item, insted of order.items) that crasehd the summary calcuation.
+
+
+
+
