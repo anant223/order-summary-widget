@@ -1,6 +1,7 @@
 import React from "react";
 import { orders } from "../data/orders";
 import { getTotalRevenue } from "../utils/orderCalculations";
+import StatusBadge from "./StatusBadge";
 
 const OrderTable = () => {
   return (
@@ -23,7 +24,9 @@ const OrderTable = () => {
               <td>{order.customer}</td>
               <td>{order.items.length}</td>
               <td>₹{getTotalRevenue(order)}</td>
-              <td>{order.status}</td>
+              <td>
+                <StatusBadge status={order.status} />
+              </td>
             </tr>
           ))}
         </tbody>
